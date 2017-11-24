@@ -1,0 +1,6 @@
+framework module Pods_iTrust {
+  umbrella header "Pods-iTrust-umbrella.h"
+
+  export *
+  module * { export * }
+}

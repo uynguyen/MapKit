@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EF90D93E730DF0958D14D52 /* Pods_iTrustUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */; };
 		30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1B1FC7CB530048649B /* AppDelegate.swift */; };
 		30A0CB1E1FC7CB530048649B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1D1FC7CB530048649B /* ViewController.swift */; };
 		30A0CB211FC7CB530048649B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0CB1F1FC7CB530048649B /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		30A0CB261FC7CB530048649B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0CB241FC7CB530048649B /* LaunchScreen.storyboard */; };
 		30A0CB311FC7CB530048649B /* iTrustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB301FC7CB530048649B /* iTrustTests.swift */; };
 		30A0CB3C1FC7CB530048649B /* iTrustUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB3B1FC7CB530048649B /* iTrustUITests.swift */; };
+		4B20E2753176FA8B3E9E8FD6 /* Pods_iTrustTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8666D1EED6D5C6C821F8EA20 /* Pods_iTrustTests.framework */; };
+		8713A9E2C169305186A7185E /* Pods_iTrust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93941ACB3F66A2CEDBD52DD /* Pods_iTrust.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DA58240C3A411F71B78CDA9 /* Pods-iTrustTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrustTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTrustTests/Pods-iTrustTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0EB2B8CCF66FA3679C22F46E /* Pods-iTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrust.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTrust/Pods-iTrust.release.xcconfig"; sourceTree = "<group>"; };
 		30A0CB181FC7CB530048649B /* iTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0CB1B1FC7CB530048649B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A0CB1D1FC7CB530048649B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		30A0CB371FC7CB530048649B /* iTrustUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrustUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0CB3B1FC7CB530048649B /* iTrustUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTrustUITests.swift; sourceTree = "<group>"; };
 		30A0CB3D1FC7CB530048649B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTrustUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		460124404BF3B941B8F3BB67 /* Pods-iTrustUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrustUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTrustUITests/Pods-iTrustUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E8BAA325539B89604167397 /* Pods-iTrustUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrustUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTrustUITests/Pods-iTrustUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8666D1EED6D5C6C821F8EA20 /* Pods_iTrustTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTrustTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE0BD156E821F4E552A7906 /* Pods-iTrust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrust.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTrust/Pods-iTrust.debug.xcconfig"; sourceTree = "<group>"; };
+		A93941ACB3F66A2CEDBD52DD /* Pods_iTrust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTrust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83A084F5E1AF1AE02B79EAE /* Pods-iTrustTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrustTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTrustTests/Pods-iTrustTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8713A9E2C169305186A7185E /* Pods_iTrust.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B20E2753176FA8B3E9E8FD6 /* Pods_iTrustTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF90D93E730DF0958D14D52 /* Pods_iTrustUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032B8C2D145CF476BE658FA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A93941ACB3F66A2CEDBD52DD /* Pods_iTrust.framework */,
+				8666D1EED6D5C6C821F8EA20 /* Pods_iTrustTests.framework */,
+				45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30A0CB0F1FC7CB530048649B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				30A0CB2F1FC7CB530048649B /* iTrustTests */,
 				30A0CB3A1FC7CB530048649B /* iTrustUITests */,
 				30A0CB191FC7CB530048649B /* Products */,
+				F0E8D1C08FF382477E1E03F5 /* Pods */,
+				032B8C2D145CF476BE658FA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = iTrustUITests;
 			sourceTree = "<group>";
 		};
+		F0E8D1C08FF382477E1E03F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DE0BD156E821F4E552A7906 /* Pods-iTrust.debug.xcconfig */,
+				0EB2B8CCF66FA3679C22F46E /* Pods-iTrust.release.xcconfig */,
+				0DA58240C3A411F71B78CDA9 /* Pods-iTrustTests.debug.xcconfig */,
+				D83A084F5E1AF1AE02B79EAE /* Pods-iTrustTests.release.xcconfig */,
+				7E8BAA325539B89604167397 /* Pods-iTrustUITests.debug.xcconfig */,
+				460124404BF3B941B8F3BB67 /* Pods-iTrustUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30A0CB401FC7CB530048649B /* Build configuration list for PBXNativeTarget "iTrust" */;
 			buildPhases = (
+				1C5A08CF68CF25EA13887025 /* [CP] Check Pods Manifest.lock */,
 				30A0CB141FC7CB530048649B /* Sources */,
 				30A0CB151FC7CB530048649B /* Frameworks */,
 				30A0CB161FC7CB530048649B /* Resources */,
+				93B819518E906148EDD1BD77 /* [CP] Embed Pods Frameworks */,
+				B989A898C59ED35ED4185F78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30A0CB431FC7CB530048649B /* Build configuration list for PBXNativeTarget "iTrustTests" */;
 			buildPhases = (
+				4E4FAFF1B931EE6D67C3F60B /* [CP] Check Pods Manifest.lock */,
 				30A0CB281FC7CB530048649B /* Sources */,
 				30A0CB291FC7CB530048649B /* Frameworks */,
 				30A0CB2A1FC7CB530048649B /* Resources */,
+				3F0DA7EAB8F4B5A11D0E2CAF /* [CP] Embed Pods Frameworks */,
+				9AA1249AE948F084F2E7A3BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30A0CB461FC7CB530048649B /* Build configuration list for PBXNativeTarget "iTrustUITests" */;
 			buildPhases = (
+				BF437AE2CDE7586176BB12CD /* [CP] Check Pods Manifest.lock */,
 				30A0CB331FC7CB530048649B /* Sources */,
 				30A0CB341FC7CB530048649B /* Frameworks */,
 				30A0CB351FC7CB530048649B /* Resources */,
+				30963A8F01F1ABC8337324DE /* [CP] Embed Pods Frameworks */,
+				D6C86A2E9049CE36CF59DA29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C5A08CF68CF25EA13887025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTrust-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30963A8F01F1ABC8337324DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTrustUITests/Pods-iTrustUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F0DA7EAB8F4B5A11D0E2CAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTrustTests/Pods-iTrustTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E4FAFF1B931EE6D67C3F60B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTrustTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93B819518E906148EDD1BD77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTrust/Pods-iTrust-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AA1249AE948F084F2E7A3BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTrustTests/Pods-iTrustTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B989A898C59ED35ED4185F78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTrust/Pods-iTrust-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF437AE2CDE7586176BB12CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTrustUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C86A2E9049CE36CF59DA29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTrustUITests/Pods-iTrustUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30A0CB141FC7CB530048649B /* Sources */ = {
@@ -413,6 +609,7 @@
 		};
 		30A0CB411FC7CB530048649B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DE0BD156E821F4E552A7906 /* Pods-iTrust.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WC64T22ANZ;
@@ -426,6 +623,7 @@
 		};
 		30A0CB421FC7CB530048649B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB2B8CCF66FA3679C22F46E /* Pods-iTrust.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WC64T22ANZ;
@@ -439,6 +637,7 @@
 		};
 		30A0CB441FC7CB530048649B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DA58240C3A411F71B78CDA9 /* Pods-iTrustTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +653,7 @@
 		};
 		30A0CB451FC7CB530048649B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D83A084F5E1AF1AE02B79EAE /* Pods-iTrustTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +669,7 @@
 		};
 		30A0CB471FC7CB530048649B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E8BAA325539B89604167397 /* Pods-iTrustUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = WC64T22ANZ;
@@ -483,6 +684,7 @@
 		};
 		30A0CB481FC7CB530048649B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 460124404BF3B941B8F3BB67 /* Pods-iTrustUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = WC64T22ANZ;
