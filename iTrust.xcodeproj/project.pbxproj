@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1EF90D93E730DF0958D14D52 /* Pods_iTrustUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */; };
+		308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */; };
+		308C0B042021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */; };
+		308C0B062021BA4D00CB1347 /* HHHListChurchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */; };
+		308C0B0A2021D10800CB1347 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B092021D10800CB1347 /* FirebaseManager.swift */; };
+		308C0B0C2021D14F00CB1347 /* RootDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B0B2021D14F00CB1347 /* RootDAO.swift */; };
+		308C0B0F2021D18F00CB1347 /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B0E2021D18F00CB1347 /* LoggerManager.swift */; };
+		308C0B112021D2E000CB1347 /* ChurchListDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B102021D2E000CB1347 /* ChurchListDAO.swift */; };
 		30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1B1FC7CB530048649B /* AppDelegate.swift */; };
 		30A0CB1E1FC7CB530048649B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1D1FC7CB530048649B /* ViewController.swift */; };
 		30A0CB211FC7CB530048649B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0CB1F1FC7CB530048649B /* Main.storyboard */; };
@@ -39,6 +46,13 @@
 /* Begin PBXFileReference section */
 		0DA58240C3A411F71B78CDA9 /* Pods-iTrustTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrustTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTrustTests/Pods-iTrustTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EB2B8CCF66FA3679C22F46E /* Pods-iTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrust.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTrust/Pods-iTrust.release.xcconfig"; sourceTree = "<group>"; };
+		308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HHHListChurchStoryboard.storyboard; path = Storyboard/HHHListChurchStoryboard.storyboard; sourceTree = "<group>"; };
+		308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHHListChurchViewController.swift; path = ViewController/HHHListChurchViewController.swift; sourceTree = "<group>"; };
+		308C0B092021D10800CB1347 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = DAO/FirebaseManager.swift; sourceTree = "<group>"; };
+		308C0B0B2021D14F00CB1347 /* RootDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootDAO.swift; path = DAO/RootDAO.swift; sourceTree = "<group>"; };
+		308C0B0E2021D18F00CB1347 /* LoggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerManager.swift; path = Log/LoggerManager.swift; sourceTree = "<group>"; };
+		308C0B102021D2E000CB1347 /* ChurchListDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChurchListDAO.swift; path = DAO/ChurchListDAO.swift; sourceTree = "<group>"; };
 		30A0CB181FC7CB530048649B /* iTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0CB1B1FC7CB530048649B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A0CB1D1FC7CB530048649B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +113,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		308C0AFD20217F1600CB1347 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */,
+			);
+			name = Firebase;
+			sourceTree = "<group>";
+		};
+		308C0B0020219D3E00CB1347 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B092021D10800CB1347 /* FirebaseManager.swift */,
+				308C0B0B2021D14F00CB1347 /* RootDAO.swift */,
+				308C0B102021D2E000CB1347 /* ChurchListDAO.swift */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		308C0B012021B9AE00CB1347 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		308C0B022021B9BE00CB1347 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		308C0B0D2021D17000CB1347 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B0E2021D18F00CB1347 /* LoggerManager.swift */,
+			);
+			name = Log;
+			sourceTree = "<group>";
+		};
 		30A0CB0F1FC7CB530048649B = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +180,11 @@
 		30A0CB1A1FC7CB530048649B /* iTrust */ = {
 			isa = PBXGroup;
 			children = (
+				308C0B0D2021D17000CB1347 /* Log */,
+				308C0B022021B9BE00CB1347 /* Storyboard */,
+				308C0B012021B9AE00CB1347 /* ViewController */,
+				308C0B0020219D3E00CB1347 /* DAO */,
+				308C0AFD20217F1600CB1347 /* Firebase */,
 				30A0CB1B1FC7CB530048649B /* AppDelegate.swift */,
 				30A0CB1D1FC7CB530048649B /* ViewController.swift */,
 				30A0CB1F1FC7CB530048649B /* Main.storyboard */,
@@ -285,8 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30A0CB261FC7CB530048649B /* LaunchScreen.storyboard in Resources */,
+				308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */,
 				30A0CB231FC7CB530048649B /* Assets.xcassets in Resources */,
 				30A0CB211FC7CB530048649B /* Main.storyboard in Resources */,
+				308C0B042021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +442,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iTrust/Pods-iTrust-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,8 +546,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308C0B112021D2E000CB1347 /* ChurchListDAO.swift in Sources */,
+				308C0B0A2021D10800CB1347 /* FirebaseManager.swift in Sources */,
+				308C0B062021BA4D00CB1347 /* HHHListChurchViewController.swift in Sources */,
 				30A0CB1E1FC7CB530048649B /* ViewController.swift in Sources */,
+				308C0B0C2021D14F00CB1347 /* RootDAO.swift in Sources */,
 				30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */,
+				308C0B0F2021D18F00CB1347 /* LoggerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +708,7 @@
 				DEVELOPMENT_TEAM = WC64T22ANZ;
 				INFOPLIST_FILE = iTrust/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hahahanotoomuch.iTrust;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hahahanotoomuch.Lord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -629,7 +722,7 @@
 				DEVELOPMENT_TEAM = WC64T22ANZ;
 				INFOPLIST_FILE = iTrust/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hahahanotoomuch.iTrust;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hahahanotoomuch.Lord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -716,6 +809,7 @@
 				30A0CB421FC7CB530048649B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30A0CB431FC7CB530048649B /* Build configuration list for PBXNativeTarget "iTrustTests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +818,7 @@
 				30A0CB451FC7CB530048649B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30A0CB461FC7CB530048649B /* Build configuration list for PBXNativeTarget "iTrustUITests" */ = {
 			isa = XCConfigurationList;
@@ -732,6 +827,7 @@
 				30A0CB481FC7CB530048649B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

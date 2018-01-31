@@ -50,29 +50,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        manager.stopUpdatingLocation()
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        let destination = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude + 0.00123)
-        
-        self.mapView.setRegion(MKCoordinateRegionMakeWithDistance(locValue, 250, 250), animated: true)
-        
-        
-        let sourcePlaceMark = MKPlacemark.init(coordinate: manager.location!.coordinate, addressDictionary: nil)
-        let destinationPlacemark = MKPlacemark.init(coordinate: destination, addressDictionary: nil)
-        
-        
-        let sourceMapItem = MKMapItem(placemark: sourcePlaceMark)
-        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-        
+    func addAnnotation(location: CLLocationCoordinate2D) {
         // show artwork on map
         let artwork = Artwork(title: "King David Kalakaua",
                               locationName: "Waikiki Gateway Park",
                               discipline: "Sculpture",
-                              coordinate: destination)
+                              coordinate: location)
         mapView.addAnnotation(artwork)
+    }
+    
+    var lineColor = UIColor.red
+    
+    func drawRoutes(source: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) {
+        let sourcePlaceMark = MKPlacemark.init(coordinate: source, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark.init(coordinate: destination, addressDictionary: nil)
         
-        
+        let sourceMapItem = MKMapItem(placemark: sourcePlaceMark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
         // 7.
         let directionRequest = MKDirectionsRequest()
         directionRequest.source = sourceMapItem
@@ -96,6 +90,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             let route = response.routes[0]
             let eta = response.routes[0].expectedTravelTime
+            print("ETA time \(eta/60) mins")
+            let mins = eta / 60
+            if (mins <= 0.7) {
+                self.lineColor = UIColor.gray
+            }
+            else if (mins <= 1) {
+                self.lineColor = UIColor.red
+            }
+            else {
+                self.lineColor = UIColor.green
+            }
+            
             self.mapView.add((route.polyline), level: MKOverlayLevel.aboveRoads)
             
             let rect = route.polyline.boundingMapRect
@@ -103,9 +109,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        manager.stopUpdatingLocation()
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        let destination = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude + 0.00123)
+        
+        self.mapView.setRegion(MKCoordinateRegionMakeWithDistance(locValue, 250, 250), animated: true)
+        
+        // show artwork on map
+        self.addAnnotation(location: destination)
+        
+        let des2 = CLLocationCoordinate2D(latitude: locValue.latitude - 0.00123, longitude: locValue.longitude + 0.00123)
+        let des3 = CLLocationCoordinate2D(latitude: locValue.latitude - 0.00123, longitude: locValue.longitude - 0.00123)
+        let des4 = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude - 0.00123)
+        
+        self.addAnnotation(location: des2)
+        
+        self.addAnnotation(location: des3)
+        
+        self.addAnnotation(location: des4)
+        
+        
+        self.drawRoutes(source: locValue, destination: destination)
+        self.drawRoutes(source: locValue, destination: des2)
+        self.drawRoutes(source: locValue, destination: des3)
+        self.drawRoutes(source: locValue, destination: des4)
+        
+    }
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.red
+        renderer.strokeColor = self.lineColor
         
         renderer.lineWidth = 4.0
         
