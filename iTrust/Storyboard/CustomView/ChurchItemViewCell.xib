@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G17023" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChurchItemViewCell" rowHeight="64" id="IkW-tw-1XZ" customClass="HHHChurchItemTableViewCell" customModule="iTrust" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IkW-tw-1XZ" id="TxE-Dr-OPO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWy-2E-Yhg">
+                        <rect key="frame" x="8" y="37" width="56" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ODW-Vc-aI2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIS-95-1N6">
+                        <rect key="frame" x="73" y="5" width="294" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8E-Yj-05m">
+                        <rect key="frame" x="73" y="37" width="294" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S02-0B-B8Z">
+                        <rect key="frame" x="24" y="5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="q5Y-aP-KSb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="OWy-2E-Yhg" secondAttribute="bottom" constant="-3" id="1p3-fg-4YS"/>
+                    <constraint firstItem="S02-0B-B8Z" firstAttribute="centerY" secondItem="BIS-95-1N6" secondAttribute="centerY" id="2Y7-JU-mUO"/>
+                    <constraint firstItem="OWy-2E-Yhg" firstAttribute="leading" secondItem="TxE-Dr-OPO" secondAttribute="leadingMargin" id="3HM-cM-PxJ"/>
+                    <constraint firstItem="BIS-95-1N6" firstAttribute="leading" secondItem="m8E-Yj-05m" secondAttribute="leading" id="7CZ-PM-Zlx"/>
+                    <constraint firstItem="S02-0B-B8Z" firstAttribute="top" secondItem="TxE-Dr-OPO" secondAttribute="topMargin" constant="-3" id="E0e-pr-ULh"/>
+                    <constraint firstItem="S02-0B-B8Z" firstAttribute="top" secondItem="BIS-95-1N6" secondAttribute="top" id="Rtg-49-LBr"/>
+                    <constraint firstItem="BIS-95-1N6" firstAttribute="trailing" secondItem="m8E-Yj-05m" secondAttribute="trailing" id="TKA-iN-SSx"/>
+                    <constraint firstItem="OWy-2E-Yhg" firstAttribute="baseline" secondItem="m8E-Yj-05m" secondAttribute="baseline" id="Z5C-2a-RzB"/>
+                    <constraint firstItem="S02-0B-B8Z" firstAttribute="centerX" secondItem="OWy-2E-Yhg" secondAttribute="centerX" id="gEG-dA-LFC"/>
+                    <constraint firstItem="m8E-Yj-05m" firstAttribute="leading" secondItem="OWy-2E-Yhg" secondAttribute="trailing" constant="9" id="hav-ao-EZG"/>
+                    <constraint firstItem="BIS-95-1N6" firstAttribute="leading" secondItem="S02-0B-B8Z" secondAttribute="trailing" constant="24" id="hj7-vd-nfv"/>
+                    <constraint firstItem="m8E-Yj-05m" firstAttribute="top" secondItem="BIS-95-1N6" secondAttribute="bottom" constant="6" id="vvU-Rt-hh9"/>
+                    <constraint firstItem="OWy-2E-Yhg" firstAttribute="firstBaseline" secondItem="m8E-Yj-05m" secondAttribute="firstBaseline" id="w8u-xd-KGU"/>
+                    <constraint firstItem="BIS-95-1N6" firstAttribute="trailing" secondItem="TxE-Dr-OPO" secondAttribute="trailingMargin" id="xzC-CX-deJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imgSignal" destination="S02-0B-B8Z" id="Nn3-yE-Gmi"/>
+                <outlet property="lblDeviceName" destination="BIS-95-1N6" id="6Ov-Y3-t2o"/>
+                <outlet property="lblRSSI" destination="OWy-2E-Yhg" id="Nvo-Hp-jcl"/>
+                <outlet property="lblSerialNumber" destination="m8E-Yj-05m" id="KwL-G2-WXv"/>
+            </connections>
+            <point key="canvasLocation" x="68.5" y="-138"/>
+        </tableViewCell>
+    </objects>
+</document>

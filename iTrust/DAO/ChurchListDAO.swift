@@ -16,13 +16,20 @@ class ChurchListDAO: RootDAO {
         self.kRootNode = FirebaseRootNode.RootChurchList.rawValue
     }
     
-    func getChurchList() -> Promise<Array<JSON>> {
+    func getChurchList() -> Promise<Array<Church>> {
         return Promise { fulfill, reject in
             self.accessRootDatabase()
                 .then { db -> Void in
+                    var result = [Church]()
+                    
                     let json = JSON.init(db.value as Any)
-                    let result = json.array
-                    fulfill(result!)
+                    let jsonArray = json.array
+                    
+                    for item in jsonArray! {
+                        result.append(Church(name: item["name"].stringValue))
+                    }
+                    
+                    fulfill(result)
                 }.catch { (error) in
                     LoggerManager.instance.error("Error \(error)")
                     reject(error)

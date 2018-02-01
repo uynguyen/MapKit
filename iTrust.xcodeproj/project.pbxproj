@@ -15,6 +15,10 @@
 		308C0B0C2021D14F00CB1347 /* RootDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B0B2021D14F00CB1347 /* RootDAO.swift */; };
 		308C0B0F2021D18F00CB1347 /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B0E2021D18F00CB1347 /* LoggerManager.swift */; };
 		308C0B112021D2E000CB1347 /* ChurchListDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B102021D2E000CB1347 /* ChurchListDAO.swift */; };
+		308C0B142021D83C00CB1347 /* ChurchItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308C0B132021D83C00CB1347 /* ChurchItemViewCell.xib */; };
+		308C0B172021D8F900CB1347 /* HHHChurchItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B162021D8F900CB1347 /* HHHChurchItemTableViewCell.swift */; };
+		308C0B1A2022BFC000CB1347 /* Church.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B192022BFC000CB1347 /* Church.swift */; };
+		308C0B1D2022C1A000CB1347 /* ThreadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B1C2022C1A000CB1347 /* ThreadManager.swift */; };
 		30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1B1FC7CB530048649B /* AppDelegate.swift */; };
 		30A0CB1E1FC7CB530048649B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1D1FC7CB530048649B /* ViewController.swift */; };
 		30A0CB211FC7CB530048649B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0CB1F1FC7CB530048649B /* Main.storyboard */; };
@@ -53,6 +57,10 @@
 		308C0B0B2021D14F00CB1347 /* RootDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootDAO.swift; path = DAO/RootDAO.swift; sourceTree = "<group>"; };
 		308C0B0E2021D18F00CB1347 /* LoggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerManager.swift; path = Log/LoggerManager.swift; sourceTree = "<group>"; };
 		308C0B102021D2E000CB1347 /* ChurchListDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChurchListDAO.swift; path = DAO/ChurchListDAO.swift; sourceTree = "<group>"; };
+		308C0B132021D83C00CB1347 /* ChurchItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChurchItemViewCell.xib; path = Storyboard/CustomView/ChurchItemViewCell.xib; sourceTree = "<group>"; };
+		308C0B162021D8F900CB1347 /* HHHChurchItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHHChurchItemTableViewCell.swift; path = ViewController/CustomView/HHHChurchItemTableViewCell.swift; sourceTree = "<group>"; };
+		308C0B192022BFC000CB1347 /* Church.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Church.swift; path = Model/Church.swift; sourceTree = "<group>"; };
+		308C0B1C2022C1A000CB1347 /* ThreadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadManager.swift; path = Thread/ThreadManager.swift; sourceTree = "<group>"; };
 		30A0CB181FC7CB530048649B /* iTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0CB1B1FC7CB530048649B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A0CB1D1FC7CB530048649B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 		308C0B012021B9AE00CB1347 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				308C0B152021D8E500CB1347 /* CustomView */,
 				308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */,
 			);
 			name = ViewController;
@@ -142,6 +151,7 @@
 		308C0B022021B9BE00CB1347 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				308C0B122021D7F100CB1347 /* CustomView */,
 				308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */,
 			);
 			name = Storyboard;
@@ -153,6 +163,38 @@
 				308C0B0E2021D18F00CB1347 /* LoggerManager.swift */,
 			);
 			name = Log;
+			sourceTree = "<group>";
+		};
+		308C0B122021D7F100CB1347 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B132021D83C00CB1347 /* ChurchItemViewCell.xib */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		308C0B152021D8E500CB1347 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B162021D8F900CB1347 /* HHHChurchItemTableViewCell.swift */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		308C0B182022BD5A00CB1347 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B192022BFC000CB1347 /* Church.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		308C0B1B2022C16400CB1347 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B1C2022C1A000CB1347 /* ThreadManager.swift */,
+			);
+			name = Thread;
 			sourceTree = "<group>";
 		};
 		30A0CB0F1FC7CB530048649B = {
@@ -180,6 +222,8 @@
 		30A0CB1A1FC7CB530048649B /* iTrust */ = {
 			isa = PBXGroup;
 			children = (
+				308C0B1B2022C16400CB1347 /* Thread */,
+				308C0B182022BD5A00CB1347 /* Model */,
 				308C0B0D2021D17000CB1347 /* Log */,
 				308C0B022021B9BE00CB1347 /* Storyboard */,
 				308C0B012021B9AE00CB1347 /* ViewController */,
@@ -345,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308C0B142021D83C00CB1347 /* ChurchItemViewCell.xib in Resources */,
 				30A0CB261FC7CB530048649B /* LaunchScreen.storyboard in Resources */,
 				308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */,
 				30A0CB231FC7CB530048649B /* Assets.xcassets in Resources */,
@@ -548,8 +593,11 @@
 			files = (
 				308C0B112021D2E000CB1347 /* ChurchListDAO.swift in Sources */,
 				308C0B0A2021D10800CB1347 /* FirebaseManager.swift in Sources */,
+				308C0B1A2022BFC000CB1347 /* Church.swift in Sources */,
+				308C0B1D2022C1A000CB1347 /* ThreadManager.swift in Sources */,
 				308C0B062021BA4D00CB1347 /* HHHListChurchViewController.swift in Sources */,
 				30A0CB1E1FC7CB530048649B /* ViewController.swift in Sources */,
+				308C0B172021D8F900CB1347 /* HHHChurchItemTableViewCell.swift in Sources */,
 				308C0B0C2021D14F00CB1347 /* RootDAO.swift in Sources */,
 				30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */,
 				308C0B0F2021D18F00CB1347 /* LoggerManager.swift in Sources */,
