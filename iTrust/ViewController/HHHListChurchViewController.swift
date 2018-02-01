@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseStorage
+import SwiftGifOrigin
 
 class HHHListChurchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let normalSectionTitles = ["Recent", "All"]
@@ -25,6 +27,7 @@ class HHHListChurchViewController: UIViewController, UITableViewDataSource, UITa
         self.tbChurchList.separatorColor = UIColor.init(white: 1, alpha: 0.7)
         self.tbChurchList.isMultipleTouchEnabled = false
         self.tbChurchList.tableFooterView = UIView.init(frame: CGRect.zero)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,9 +60,6 @@ class HHHListChurchViewController: UIViewController, UITableViewDataSource, UITa
         }
     }
     
-    @IBAction func btnSearchTouchDown(_ sender: Any) {
-        
-    }
 
     /*
     // MARK: - Navigation
@@ -102,7 +102,7 @@ extension HHHListChurchViewController {
         let deviceIndex = indexPath.row
     
         if deviceIndex < self.churchList.count {
-            self.configureScannedDeviceCell(cell: &cell, item: self.churchList[deviceIndex])
+            self.configureScannedDeviceCell(index: indexPath.row, cell: &cell, item: self.churchList[deviceIndex])
         }
         
         return cell
@@ -111,28 +111,42 @@ extension HHHListChurchViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
-    func configureHeaderCell(cell: inout HHHChurchItemTableViewCell, title: String) {
-        cell.lblDeviceName.font = UIFont.init(name: "HelveticaNeue-Medium", size: 20)
-        cell.lblDeviceName.frame = CGRect(x: 10, y: cell.lblDeviceName.frame.origin.y, width: cell.lblDeviceName.frame.width, height: cell.lblDeviceName.frame.height)
-        cell.lblDeviceName.text = title
-        cell.lblRSSI.text = ""
-        cell.lblSerialNumber.text = ""
-        cell.imgSignal.image = nil
-        cell.lblDeviceName.textColor = UIColor.black
-        
-        cell.separatorInset = .zero
-        
-        let separatorView = UIView(frame: CGRect(x: 10, y: 49, width: cell.frame.width - 20, height: 1))
-        
-        separatorView.backgroundColor = UIColor.white
-        separatorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        cell.addSubview(separatorView)
+    func updateImageAtIndex(row: Int, image: UIImage) {
+        if let cell = self.tbChurchList.cellForRow(at: IndexPath.init(row: row, section: 0)) as? HHHChurchItemTableViewCell {
+            ThreadManager.instance.dispatchToMainQueue {
+                cell.imgSignal.image = image
+            }
+        }
     }
     
-    func configureScannedDeviceCell(cell: inout HHHChurchItemTableViewCell, item: Church) {
+    func configureScannedDeviceCell(index: Int, cell: inout HHHChurchItemTableViewCell, item: Church) {
         cell.lblDeviceName.text = "\(item.name)"
-        cell.lblSerialNumber.text = "Unknown"
+        cell.lblSerialNumber.text = "\(item.strCN)"
+        
+        // Points to the root reference
+        let storageRef = Storage.storage().reference()
+        
+        // Points to "images"
+        let imagesRef = storageRef.child("images")
+        
+        // Points to "images/space.jpg"
+        // Note that you can use variables to create child values
+        let fileName = "\(item.id).jpg"
+        let spaceRef = imagesRef.child(fileName)
+        
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        spaceRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+            if let error = error {
+                LoggerManager.instance.error("Download error \(error)")
+                // Uh-oh, an error occurred!
+            } else {
+                LoggerManager.instance.debug("Download success")
+                let image = UIImage(data: data!)
+                self.updateImageAtIndex(row: index, image: image!)
+            }
+        }
+        
+        cell.imgSignal.image = UIImage.gif(name: "loading")
         
         cell.separatorInset = .zero
         

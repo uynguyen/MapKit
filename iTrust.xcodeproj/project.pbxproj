@@ -19,6 +19,7 @@
 		308C0B172021D8F900CB1347 /* HHHChurchItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B162021D8F900CB1347 /* HHHChurchItemTableViewCell.swift */; };
 		308C0B1A2022BFC000CB1347 /* Church.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B192022BFC000CB1347 /* Church.swift */; };
 		308C0B1D2022C1A000CB1347 /* ThreadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B1C2022C1A000CB1347 /* ThreadManager.swift */; };
+		308C0B202022FF8200CB1347 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 308C0B1F2022FF8200CB1347 /* loading.gif */; };
 		30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1B1FC7CB530048649B /* AppDelegate.swift */; };
 		30A0CB1E1FC7CB530048649B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0CB1D1FC7CB530048649B /* ViewController.swift */; };
 		30A0CB211FC7CB530048649B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0CB1F1FC7CB530048649B /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		308C0B162021D8F900CB1347 /* HHHChurchItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHHChurchItemTableViewCell.swift; path = ViewController/CustomView/HHHChurchItemTableViewCell.swift; sourceTree = "<group>"; };
 		308C0B192022BFC000CB1347 /* Church.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Church.swift; path = Model/Church.swift; sourceTree = "<group>"; };
 		308C0B1C2022C1A000CB1347 /* ThreadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadManager.swift; path = Thread/ThreadManager.swift; sourceTree = "<group>"; };
+		308C0B1F2022FF8200CB1347 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		30A0CB181FC7CB530048649B /* iTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0CB1B1FC7CB530048649B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A0CB1D1FC7CB530048649B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,14 @@
 			name = Thread;
 			sourceTree = "<group>";
 		};
+		308C0B1E2022FF7900CB1347 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				308C0B1F2022FF8200CB1347 /* loading.gif */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		30A0CB0F1FC7CB530048649B = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +232,7 @@
 		30A0CB1A1FC7CB530048649B /* iTrust */ = {
 			isa = PBXGroup;
 			children = (
+				308C0B1E2022FF7900CB1347 /* Images */,
 				308C0B1B2022C16400CB1347 /* Thread */,
 				308C0B182022BD5A00CB1347 /* Model */,
 				308C0B0D2021D17000CB1347 /* Log */,
@@ -393,6 +404,7 @@
 				30A0CB261FC7CB530048649B /* LaunchScreen.storyboard in Resources */,
 				308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */,
 				30A0CB231FC7CB530048649B /* Assets.xcassets in Resources */,
+				308C0B202022FF8200CB1347 /* loading.gif in Resources */,
 				30A0CB211FC7CB530048649B /* Main.storyboard in Resources */,
 				308C0B042021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard in Resources */,
 			);
@@ -491,11 +503,13 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -506,11 +520,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",

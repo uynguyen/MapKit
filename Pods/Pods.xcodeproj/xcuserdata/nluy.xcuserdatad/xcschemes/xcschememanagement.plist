@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftGifOrigin.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyBeaver.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,7 +97,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2CA6924FB14B38A1BD1C46633D4DFF24</key>
+		<key>0BB7E5F54EDC1861C44E43DACE80F6CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3048209142DDFFE50936AC374A10B5A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53D7E21C2643D22872BCAD9C93BDC0A5</key>
+		<key>51020F234E66A3C16E9DB638C722A9E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +127,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8630BFC84A016FB528A7F31CA8DA18D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9038BE35F3CF9242777DF57B59EE47E4</key>
+		<key>8D20E12AA2449F4FCB09262718DB2A46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA3062158EC1C1443907F82261DB2C17</key>
+		<key>9038BE35F3CF9242777DF57B59EE47E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,7 +157,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B92EB98EDDCD7676EFC75D5C7F38447A</key>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,12 +177,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E25684ED8DB45B866C73C86071843618</key>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<key>E94730237846B9DFCFD77CA6423C4221</key>
 		<dict>
 			<key>primary</key>
 			<true/>

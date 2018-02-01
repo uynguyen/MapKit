@@ -26,7 +26,7 @@ class ChurchListDAO: RootDAO {
                     let jsonArray = json.array
                     
                     for item in jsonArray! {
-                        result.append(Church(name: item["name"].stringValue))
+                        result.append(Church(json: item))
                     }
                     
                     fulfill(result)

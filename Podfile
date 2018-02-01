@@ -13,6 +13,7 @@ target 'iTrust' do
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Storage'
   
   pod 'PKHUD', '~> 4.0'
   pod 'SwiftyJSON', '3.1.4'
@@ -25,6 +26,8 @@ target 'iTrust' do
   # Async
   pod 'PromiseKit', '~> 4.4'
   pod 'PromiseKit/Alamofire'
+  
+  pod 'SwiftGifOrigin', '~> 1.6.1'
 
   target 'iTrustTests' do
     inherit! :search_paths

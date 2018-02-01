@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,15 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcm-Uo-uZD">
-                                <rect key="frame" x="294" y="28" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="btnSearchTouchDown:" destination="BpV-3v-Zyv" eventType="touchDown" id="laP-MS-f0l"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-iM-mNM">
-                                <rect key="frame" x="0.0" y="82" width="375" height="585"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RAK-xk-Pcb">
@@ -46,12 +38,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ff2-iM-mNM" firstAttribute="leading" secondItem="hq6-hn-K4X" secondAttribute="leading" id="DKZ-q2-Y92"/>
-                            <constraint firstItem="Ff2-iM-mNM" firstAttribute="bottom" secondItem="NHp-Pe-JJ7" secondAttribute="top" id="F6Q-bP-tXg"/>
-                            <constraint firstItem="Ff2-iM-mNM" firstAttribute="top" secondItem="hcm-Uo-uZD" secondAttribute="bottom" constant="24" id="b3m-P8-Fer"/>
-                            <constraint firstItem="hcm-Uo-uZD" firstAttribute="top" secondItem="UOm-Y6-uXE" secondAttribute="bottom" constant="8" symbolic="YES" id="bV7-em-cA6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hcm-Uo-uZD" secondAttribute="trailing" constant="19" id="iXf-n2-r2q"/>
-                            <constraint firstAttribute="trailing" secondItem="Ff2-iM-mNM" secondAttribute="trailing" id="y0K-qE-kA9"/>
+                            <constraint firstItem="Ff2-iM-mNM" firstAttribute="leading" secondItem="hq6-hn-K4X" secondAttribute="leading" id="Gvj-60-AUG"/>
+                            <constraint firstItem="Ff2-iM-mNM" firstAttribute="top" secondItem="UOm-Y6-uXE" secondAttribute="bottom" id="KAs-ng-TvF"/>
+                            <constraint firstItem="Ff2-iM-mNM" firstAttribute="bottom" secondItem="NHp-Pe-JJ7" secondAttribute="top" id="YBz-r4-Cfg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ff2-iM-mNM" secondAttribute="trailing" id="hKD-r5-wx2"/>
                         </constraints>
                     </view>
                     <connections>
