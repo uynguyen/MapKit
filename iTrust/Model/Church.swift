@@ -15,6 +15,7 @@ class Church: NSObject {
     var link: String
     var strCN: String
     var CN: Array<Date>
+    var image: UIImage?
     var address: String
     
     public init(json: JSON) {

@@ -124,6 +124,7 @@ extension HHHListChurchViewController {
     }
     
     func updateImageAtIndex(row: Int, image: UIImage) {
+        self.churchList[row].image = image
         if let cell = self.tbChurchList.cellForRow(at: IndexPath.init(row: row, section: 0)) as? HHHChurchItemTableViewCell {
             ThreadManager.instance.dispatchToMainQueue {
                 cell.imgSignal.image = image

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EF90D93E730DF0958D14D52 /* Pods_iTrustUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */; };
 		3039765020247B4200C0551B /* HHHMapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3039764F20247B4200C0551B /* HHHMapStoryboard.storyboard */; };
+		303976522024DE3A00C0551B /* uy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 303976512024DE3A00C0551B /* uy.jpg */; };
 		308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */; };
 		308C0B042021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */; };
 		308C0B062021BA4D00CB1347 /* HHHListChurchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */; };
@@ -53,6 +54,7 @@
 		0DA58240C3A411F71B78CDA9 /* Pods-iTrustTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrustTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTrustTests/Pods-iTrustTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EB2B8CCF66FA3679C22F46E /* Pods-iTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrust.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTrust/Pods-iTrust.release.xcconfig"; sourceTree = "<group>"; };
 		3039764F20247B4200C0551B /* HHHMapStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HHHMapStoryboard.storyboard; sourceTree = "<group>"; };
+		303976512024DE3A00C0551B /* uy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uy.jpg; sourceTree = "<group>"; };
 		308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HHHListChurchStoryboard.storyboard; path = Storyboard/HHHListChurchStoryboard.storyboard; sourceTree = "<group>"; };
 		308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHHListChurchViewController.swift; path = ViewController/HHHListChurchViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		308C0B1E2022FF7900CB1347 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				303976512024DE3A00C0551B /* uy.jpg */,
 				308C0B1F2022FF8200CB1347 /* loading.gif */,
 			);
 			name = Images;
@@ -408,6 +411,7 @@
 				30A0CB261FC7CB530048649B /* LaunchScreen.storyboard in Resources */,
 				308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */,
 				30A0CB231FC7CB530048649B /* Assets.xcassets in Resources */,
+				303976522024DE3A00C0551B /* uy.jpg in Resources */,
 				308C0B202022FF8200CB1347 /* loading.gif in Resources */,
 				30A0CB211FC7CB530048649B /* Main.storyboard in Resources */,
 				308C0B042021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard in Resources */,
