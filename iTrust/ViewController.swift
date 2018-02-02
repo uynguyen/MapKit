@@ -31,6 +31,11 @@ class Artwork: NSObject, MKAnnotation {
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    var selectedChurchIndex: Int?
+    var churchs = [Church]()
+    var selectedChurch: Church?
+    
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +53,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             locationManager.startUpdatingLocation()
         }
         
+        self.selectedChurch = self.churchs[self.selectedChurchIndex!]
+        
     }
     
     func addAnnotation(location: CLLocationCoordinate2D) {
         // show artwork on map
-        let artwork = Artwork(title: "King David Kalakaua",
-                              locationName: "Waikiki Gateway Park",
+        let artwork = Artwork(title: (self.selectedChurch?.name)!,
+                              locationName: (self.selectedChurch?.address)!,
                               discipline: "Sculpture",
                               coordinate: location)
         mapView.addAnnotation(artwork)
@@ -112,28 +119,49 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         manager.stopUpdatingLocation()
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        let destination = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude + 0.00123)
         
-        self.mapView.setRegion(MKCoordinateRegionMakeWithDistance(locValue, 250, 250), animated: true)
+        LoggerManager.instance.debug("Selected church \(selectedChurch?.name) \(selectedChurch?.address)")
         
-        // show artwork on map
-        self.addAnnotation(location: destination)
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = selectedChurch?.address
+        request.region = mapView.region
+        let search = MKLocalSearch(request: request)
+        search.start { response, _ in
+            guard let response = response else {
+                return
+            }
+            
+            let matchingItems = response.mapItems
+            for place in matchingItems {
+                self.addAnnotation(location:  place.placemark.coordinate)
+                
+                self.drawRoutes(source: locValue, destination: place.placemark.coordinate)
+            }
+        }
         
-        let des2 = CLLocationCoordinate2D(latitude: locValue.latitude - 0.00123, longitude: locValue.longitude + 0.00123)
-        let des3 = CLLocationCoordinate2D(latitude: locValue.latitude - 0.00123, longitude: locValue.longitude - 0.00123)
-        let des4 = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude - 0.00123)
         
-        self.addAnnotation(location: des2)
-        
-        self.addAnnotation(location: des3)
-        
-        self.addAnnotation(location: des4)
-        
-        
-        self.drawRoutes(source: locValue, destination: destination)
-        self.drawRoutes(source: locValue, destination: des2)
-        self.drawRoutes(source: locValue, destination: des3)
-        self.drawRoutes(source: locValue, destination: des4)
+//        let destination = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude + 0.00123)
+//        
+//        self.mapView.setRegion(MKCoordinateRegionMakeWithDistance(locValue, 250, 250), animated: true)
+//        
+//        // show artwork on map
+//        self.addAnnotation(location: destination)
+//        
+//        let des2 = CLLocationCoordinate2D(latitude: locValue.latitude - 0.00123, longitude: locValue.longitude + 0.00123)
+//        let des3 = CLLocationCoordinate2D(latitude: locValue.latitude - 0.00123, longitude: locValue.longitude - 0.00123)
+//        let des4 = CLLocationCoordinate2D(latitude: locValue.latitude + 0.00123, longitude: locValue.longitude - 0.00123)
+//        
+//        self.addAnnotation(location: des2)
+//        
+//        self.addAnnotation(location: des3)
+//        
+//        self.addAnnotation(location: des4)
+//        
+//        
+//        self.drawRoutes(source: locValue, destination: destination)
+//        self.drawRoutes(source: locValue, destination: des2)
+//        self.drawRoutes(source: locValue, destination: des3)
+//        self.drawRoutes(source: locValue, destination: des4)
         
     }
     

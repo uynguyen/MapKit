@@ -14,6 +14,7 @@ class HHHListChurchViewController: UIViewController, UITableViewDataSource, UITa
     let normalSectionTitles = ["Recent", "All"]
     
     var churchList = [Church]()
+    var selectedChurchIndex: Int?
     
     @IBOutlet weak var tbChurchList: UITableView!
 
@@ -74,6 +75,15 @@ class HHHListChurchViewController: UIViewController, UITableViewDataSource, UITa
 }
 
 extension HHHListChurchViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "MapSegue") {
+            let mapVC = segue.destination as! ViewController
+            mapVC.churchs = self.churchList
+            mapVC.selectedChurchIndex = self.selectedChurchIndex
+            
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -109,6 +119,8 @@ extension HHHListChurchViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedChurchIndex = indexPath.row
+        self.performSegue(withIdentifier: "MapSegue", sender: self)
     }
     
     func updateImageAtIndex(row: Int, image: UIImage) {
@@ -134,19 +146,22 @@ extension HHHListChurchViewController {
         let fileName = "\(item.id).jpg"
         let spaceRef = imagesRef.child(fileName)
         
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        spaceRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
-            if let error = error {
-                LoggerManager.instance.error("Download error \(error)")
-                // Uh-oh, an error occurred!
-            } else {
-                LoggerManager.instance.debug("Download success")
-                let image = UIImage(data: data!)
-                self.updateImageAtIndex(row: index, image: image!)
+        DispatchQueue.global().async {
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            spaceRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+                if let error = error {
+                    LoggerManager.instance.error("Download error \(error)")
+                    // Uh-oh, an error occurred!
+                } else {
+                    LoggerManager.instance.debug("Download success")
+                    let image = UIImage(data: data!)
+                    self.updateImageAtIndex(row: index, image: image!)
+                }
             }
         }
         
-        cell.imgSignal.image = UIImage.gif(name: "loading")
+        
+        //cell.imgSignal.image = UIImage.gif(name: "loading")
         
         cell.separatorInset = .zero
         

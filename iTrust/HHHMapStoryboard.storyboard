@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G17023" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0m6-Ml-o9S">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4l0-gi-FfT">
+            <objects>
+                <viewController id="0m6-Ml-o9S" customClass="ViewController" customModule="iTrust" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPz-dX-XSZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tc4-pM-HqT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qsN-GZ-D8j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kJ-pZ-XUR">
+                                <rect key="frame" x="0.0" y="50" width="375" height="581"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tc4-pM-HqT" firstAttribute="top" secondItem="9kJ-pZ-XUR" secondAttribute="bottom" constant="36" id="5ki-nU-ioU"/>
+                            <constraint firstItem="9kJ-pZ-XUR" firstAttribute="leading" secondItem="qsN-GZ-D8j" secondAttribute="leading" id="hgw-0G-hBD"/>
+                            <constraint firstItem="9kJ-pZ-XUR" firstAttribute="top" secondItem="hPz-dX-XSZ" secondAttribute="bottom" constant="30" id="k40-5U-Acy"/>
+                            <constraint firstAttribute="trailing" secondItem="9kJ-pZ-XUR" secondAttribute="trailing" id="qaR-kS-NV1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="9kJ-pZ-XUR" id="zrE-nc-ZQm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zey-WG-NNI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-940" y="-214.54272863568218"/>
+        </scene>
+    </scenes>
+</document>

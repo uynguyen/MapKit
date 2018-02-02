@@ -15,12 +15,14 @@ class Church: NSObject {
     var link: String
     var strCN: String
     var CN: Array<Date>
+    var address: String
     
     public init(json: JSON) {
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
         self.link = json["link"].stringValue
         self.strCN = json["strCN"].stringValue
+        self.address = json["address"].stringValue
         self.CN = [Date]()
         
         if let CNList = json["CN"].arrayObject {

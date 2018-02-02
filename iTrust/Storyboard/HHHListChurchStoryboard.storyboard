@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAK-xk-Pcb" id="IDN-5C-bNX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -46,11 +46,20 @@
                     </view>
                     <connections>
                         <outlet property="tbChurchList" destination="Ff2-iM-mNM" id="z2O-8P-yzG"/>
+                        <segue destination="7zC-K1-Zve" kind="show" identifier="MapSegue" id="rZn-aw-acF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqv-TX-vGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-255.19999999999999" y="62.518740629685162"/>
+        </scene>
+        <!--HHHMapStoryboard-->
+        <scene sceneID="o8o-1B-VpK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HHHMapStoryboard" id="7zC-K1-Zve" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uc-lu-l6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="-82"/>
         </scene>
     </scenes>
 </document>
