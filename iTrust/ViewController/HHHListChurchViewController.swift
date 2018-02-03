@@ -136,7 +136,7 @@ extension HHHListChurchViewController {
         cell.lblSerialNumber.text = "\(item.strCN)"
         cell.imgSignal.image = item.image
         
-        if FolderManager.instance.checkIfExistAsset(path: "\(item.id).jpg") {
+        if FolderManager.instance.checkIfExistAsset(path: item.imagePath) {
             self.updateImageAtIndex(row: index)
         }
         else {

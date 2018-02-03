@@ -11,6 +11,8 @@ import SwiftyJSON
 import FirebaseStorage
 import PromiseKit
 
+let imageExt = ".jpg"
+
 class Church: NSObject {
     var id: Int
     var name: String
@@ -19,11 +21,17 @@ class Church: NSObject {
     var CN: Array<Date>
     var address: String
     
+    var imagePath: String {
+        get {
+            return "\(self.id)\(imageExt)"
+        }
+    }
+    
     
     var image: UIImage? {
         get {
-            if FolderManager.instance.checkIfExistAsset(path: "\(self.id).jpg") {
-                let url = FileUtility.documentDirectory.appendingPathComponent("\(self.id).jpg", isDirectory: false)
+            if FolderManager.instance.checkIfExistAsset(path: self.imagePath) {
+                let url = FileUtility.documentDirectory.appendingPathComponent(self.imagePath, isDirectory: false)
                 return UIImage.init(contentsOfFile: url.path)
             }
             return nil
@@ -62,21 +70,19 @@ class Church: NSObject {
         return Promise { fulfill, reject in
             let storageRef = Storage.storage().reference()
             let imagesRef = storageRef.child("images")
+            let spaceRef = imagesRef.child(self.imagePath)
             
-            let fileName = "\(self.id).jpg"
-            let spaceRef = imagesRef.child(fileName)
-            
-            DispatchQueue.global().async {
+            DispatchQueue.global(qos: .background).async {
                 // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
                 spaceRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
                     if let error = error {
-                        LoggerManager.instance.error("Download error \(fileName): \(error)")
+                        LoggerManager.instance.error("Download error \(self.imagePath): \(error)")
                         reject(error)
                     } else {
-                        LoggerManager.instance.debug("Download \(fileName) success")
+                        LoggerManager.instance.debug("Download \(self.imagePath) success")
                         
                         if let data = data {
-                            _ = FileUtility.save(data: data, pathComponent: "", fileName: "\(self.id).jpg")
+                            _ = FileUtility.save(data: data, pathComponent: "", fileName: self.imagePath)
                         }
                         
                         fulfill()
