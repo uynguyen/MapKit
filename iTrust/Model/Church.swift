@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import FirebaseStorage
+import PromiseKit
 
 class Church: NSObject {
     var id: Int
@@ -15,8 +17,19 @@ class Church: NSObject {
     var link: String
     var strCN: String
     var CN: Array<Date>
-    var image: UIImage?
     var address: String
+    
+    
+    var image: UIImage? {
+        get {
+            if FolderManager.instance.checkIfExistAsset(path: "\(self.id).jpg") {
+                let url = FileUtility.documentDirectory.appendingPathComponent("\(self.id).jpg", isDirectory: false)
+                return UIImage.init(contentsOfFile: url.path)
+            }
+            return nil
+        }
+    }
+    
     
     public init(json: JSON) {
         self.id = json["id"].intValue
@@ -39,6 +52,35 @@ class Church: NSObject {
                     let minutePart = Int(NSCalendar.current.component(.minute, from: time))
                     
                     self.CN.append(time)
+                }
+            }
+        }
+    }
+    
+    public func downLoadImage() -> Promise<Void> {
+        // Points to the root reference
+        return Promise { fulfill, reject in
+            let storageRef = Storage.storage().reference()
+            let imagesRef = storageRef.child("images")
+            
+            let fileName = "\(self.id).jpg"
+            let spaceRef = imagesRef.child(fileName)
+            
+            DispatchQueue.global().async {
+                // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+                spaceRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+                    if let error = error {
+                        LoggerManager.instance.error("Download error \(fileName): \(error)")
+                        reject(error)
+                    } else {
+                        LoggerManager.instance.debug("Download \(fileName) success")
+                        
+                        if let data = data {
+                            _ = FileUtility.save(data: data, pathComponent: "", fileName: "\(self.id).jpg")
+                        }
+                        
+                        fulfill()
+                    }
                 }
             }
         }

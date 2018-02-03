@@ -123,11 +123,10 @@ extension HHHListChurchViewController {
         self.performSegue(withIdentifier: "MapSegue", sender: self)
     }
     
-    func updateImageAtIndex(row: Int, image: UIImage) {
-        self.churchList[row].image = image
+    func updateImageAtIndex(row: Int) {
         if let cell = self.tbChurchList.cellForRow(at: IndexPath.init(row: row, section: 0)) as? HHHChurchItemTableViewCell {
             ThreadManager.instance.dispatchToMainQueue {
-                cell.imgSignal.image = image
+                cell.imgSignal.image = self.churchList[row].image
             }
         }
     }
@@ -135,40 +134,20 @@ extension HHHListChurchViewController {
     func configureScannedDeviceCell(index: Int, cell: inout HHHChurchItemTableViewCell, item: Church) {
         cell.lblDeviceName.text = "\(item.name)"
         cell.lblSerialNumber.text = "\(item.strCN)"
+        cell.imgSignal.image = item.image
         
-        // Points to the root reference
-        let storageRef = Storage.storage().reference()
-        
-        // Points to "images"
-        let imagesRef = storageRef.child("images")
-        
-        // Points to "images/space.jpg"
-        // Note that you can use variables to create child values
-        let fileName = "\(item.id).jpg"
-        let spaceRef = imagesRef.child(fileName)
-        
-        DispatchQueue.global().async {
-            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            spaceRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
-                if let error = error {
-                    LoggerManager.instance.error("Download error \(error)")
-                    // Uh-oh, an error occurred!
-                } else {
-                    LoggerManager.instance.debug("Download success")
-                    let image = UIImage(data: data!)
-                    self.updateImageAtIndex(row: index, image: image!)
-                }
+        if FolderManager.instance.checkIfExistAsset(path: "\(item.id).jpg") {
+            self.updateImageAtIndex(row: index)
+        }
+        else {
+            item.downLoadImage().then { _ -> Void in
+                self.updateImageAtIndex(row: index)
             }
         }
         
-        
-        //cell.imgSignal.image = UIImage.gif(name: "loading")
-        
         cell.separatorInset = .zero
-        
         let separatorView = UIView(frame: CGRect(x: 10, y: 63, width: cell.frame.width - 20, height: 0.5))
         
-        //separatorView.backgroundColor = ColourConstants.executeButton
         separatorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         cell.addSubview(separatorView)

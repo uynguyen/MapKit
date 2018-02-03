@@ -10,6 +10,8 @@
 		1EF90D93E730DF0958D14D52 /* Pods_iTrustUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */; };
 		3039765020247B4200C0551B /* HHHMapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3039764F20247B4200C0551B /* HHHMapStoryboard.storyboard */; };
 		303976522024DE3A00C0551B /* uy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 303976512024DE3A00C0551B /* uy.jpg */; };
+		3039765520256C2B00C0551B /* FolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039765420256C2B00C0551B /* FolderManager.swift */; };
+		3039765720256C5B00C0551B /* FileUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039765620256C5B00C0551B /* FileUtility.swift */; };
 		308C0AFF20217F5200CB1347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */; };
 		308C0B042021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */; };
 		308C0B062021BA4D00CB1347 /* HHHListChurchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */; };
@@ -55,6 +57,8 @@
 		0EB2B8CCF66FA3679C22F46E /* Pods-iTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTrust.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTrust/Pods-iTrust.release.xcconfig"; sourceTree = "<group>"; };
 		3039764F20247B4200C0551B /* HHHMapStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HHHMapStoryboard.storyboard; sourceTree = "<group>"; };
 		303976512024DE3A00C0551B /* uy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uy.jpg; sourceTree = "<group>"; };
+		3039765420256C2B00C0551B /* FolderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderManager.swift; path = Folder/FolderManager.swift; sourceTree = "<group>"; };
+		3039765620256C5B00C0551B /* FileUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileUtility.swift; path = Folder/FileUtility.swift; sourceTree = "<group>"; };
 		308C0AFE20217F5200CB1347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		308C0B032021B9DC00CB1347 /* HHHListChurchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HHHListChurchStoryboard.storyboard; path = Storyboard/HHHListChurchStoryboard.storyboard; sourceTree = "<group>"; };
 		308C0B052021BA4D00CB1347 /* HHHListChurchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHHListChurchViewController.swift; path = ViewController/HHHListChurchViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 				45F1AD488E330A5440979AEA /* Pods_iTrustUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3039765320256C1700C0551B /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				3039765420256C2B00C0551B /* FolderManager.swift */,
+				3039765620256C5B00C0551B /* FileUtility.swift */,
+			);
+			name = Folder;
 			sourceTree = "<group>";
 		};
 		308C0AFD20217F1600CB1347 /* Firebase */ = {
@@ -238,6 +251,7 @@
 		30A0CB1A1FC7CB530048649B /* iTrust */ = {
 			isa = PBXGroup;
 			children = (
+				3039765320256C1700C0551B /* Folder */,
 				308C0B1E2022FF7900CB1347 /* Images */,
 				308C0B1B2022C16400CB1347 /* Thread */,
 				308C0B182022BD5A00CB1347 /* Model */,
@@ -615,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3039765720256C5B00C0551B /* FileUtility.swift in Sources */,
 				308C0B112021D2E000CB1347 /* ChurchListDAO.swift in Sources */,
 				308C0B0A2021D10800CB1347 /* FirebaseManager.swift in Sources */,
 				308C0B1A2022BFC000CB1347 /* Church.swift in Sources */,
@@ -625,6 +640,7 @@
 				308C0B0C2021D14F00CB1347 /* RootDAO.swift in Sources */,
 				30A0CB1C1FC7CB530048649B /* AppDelegate.swift in Sources */,
 				308C0B0F2021D18F00CB1347 /* LoggerManager.swift in Sources */,
+				3039765520256C2B00C0551B /* FolderManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
